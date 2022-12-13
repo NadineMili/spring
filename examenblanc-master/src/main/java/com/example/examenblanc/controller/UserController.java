@@ -1,5 +1,6 @@
 package com.example.examenblanc.controller;
 
+import com.example.examenblanc.entities.User;
 import com.example.examenblanc.service.UtilisateurService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,7 +16,7 @@ public class UserController {
     public UtilisateurService utilisateurService;
 
     @PostMapping("/ajouter-user")
-    public void ajouterUser(@RequestBody User user){
-        userService.ajouterUser(user);
+    public void ajouterUser(@RequestBody User u){
+        utilisateurService.ajouterUtilisateur(u);
     }
 }
